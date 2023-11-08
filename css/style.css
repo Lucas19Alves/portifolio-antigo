@@ -29,11 +29,6 @@
     color: #1900ff;
 }
 
-.skills {
-    border-style: solid;
-    border-color: rgb(42, 42, 42);
-}
-
 .arrow-animation {
     animation: bounce 2s infinite;
 }
