@@ -2,8 +2,18 @@
     background-color: rgb(42, 42, 42);
 }
 
+.bg {
+    background-color: rgb(21, 21, 21);
+}
+
 .azul {
     color: #1900ff;
+}
+
+.cardcontato {
+    text-decoration: none;
+    color: #fff;
+    
 }
 
 .hello {

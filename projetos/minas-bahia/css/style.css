@@ -1,0 +1,89 @@
+.texto {
+    font-size: large;
+    text-align: center;
+}
+
+
+
+.price-sec-wrap {
+    width: 100%;
+    float: left;
+    padding: 60px 0;
+    font-family: 'Lato', sans-serif;
+}
+.main-heading {
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 15px;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+.price-box {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.10);
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.price-box ul {
+    padding: 10px 0px 30px;
+    margin: 17px 0 0 0;
+    list-style: none;
+    border-top: solid 1px #e9e9e9;
+}
+.price-box ul li {
+    padding: 7px 0;
+    font-size: 14px;
+    color: #808080;
+}
+.price-box ul li .fas {
+    color: #68AE4A;
+    margin-right: 7px; 
+    font-size: 12px;
+}
+.price-label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.34;
+    margin-bottom: 0;
+    padding: 6px 15px;
+    display: inline-block;
+    border-radius: 3px; 
+}
+.price-label.s10 {
+    background: #E8EAF6;
+    color: #3F51B5;
+}
+.price-label.etanol {
+    background: #E8F5E9;
+    color: #4CAF50;
+}
+.price-label.aditivada {
+    background: #FBE9E7;
+    color: #FF5722;
+}
+.price-label.comum {
+    background: #fafadc;
+    color: #ffde22;
+}
+.price-label.s500 {
+    background: #e6e6e6;
+    color: #252525;
+}
+.price {
+    font-size: 44px;
+    line-height: 44px;
+    margin: 15px 0 6px;
+    font-weight: 900;
+}
+.price-info {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.67;
+    color: inherit;
+    width: 100%;
+    margin: 0;
+    color: #989898;
+}

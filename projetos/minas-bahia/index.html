@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--tag meta bootstrap-->
+    <title>Minas Bahia - Cada cliente um amigo!</title>
+    <link href="css/bootstrap.css" rel="stylesheet"> <!--css bootstrap-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script src="js/bootstrap.bundle.min.js"></script> <!--script bootstrap-->
+</head>
+
+<body>
+
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <img src="images/favicon/android-chrome-512x512.png" alt="Logo do Posto de Gasolina" width="50"
+                    height="40" class="d-inline-block align-text-top" style="margin: 20px;">
+                <a class="navbar-brand" href="#">MINAS BAHIA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#posto">Posto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hotel">Hotel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#restaurante">Restaurante</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <br><br>
+        <!-- Inicio bem-vindo-->
+        <div class="row text-center align-items-end">
+            <h1>Bem-vindo ao Minas Bahia</h1>
+        </div>
+        <br>
+        <div class="container mt-04 texto">
+            <p>O Estabelecimento Minas Bahia é um complexo que combina um posto de gasolina, hotel e restaurante,
+                proporcionando comodidade aos viajantes que desejam parar para descansar, reabastecer e desfrutar de
+                refeições de qualidade. O estabelecimento oferece serviços integrados em um único local, tornando-se uma
+                opção conveniente para os visitantes.</p><br>
+        </div>
+        <!-- Fim bem-vindo-->
+        <!-- Inicio container carrosel-->
+        <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/image.jpeg" class="d-block w-100 h-25 img-fluid" alt="Imagem 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/images.jpg" class="d-block w-100 h-25 img-fluid" alt="Imagem 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/imagel.jpeg" class="d-block w-100 h-25 img-fluid" alt="Imagem 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </a>
+        </div>
+        <!-- fim container carrosel-->
+        <hr class="border-top mt-4">
+        <!-- Inicio container Posto-->
+        <section>
+            <div class="row text-center align-items-end">
+                <div class="" id="posto">
+                    <h1>POSTO MINAS BAHIA</h1>
+                </div>
+            </div>
+            <div class="container mt-4 texto">
+                <p>
+                    O Posto Minas Bahia oferece combustíveis de alta qualidade,
+                    incluindo gasolina, diesel e etanol. Além disso, estão disponíveis serviços de troca de óleo,
+                    calibragem de pneus e outros serviços automotivos essenciais.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Contato Posto</h2>
+                    <p>
+
+                        <i class="fas fa-phone"></i> Telefone: (00) 1234-5678<br>
+                        <i class="fas fa-envelope"></i> Email: exemplo@postogas.com<br>
+                        <i class="fas fa-clock"></i> Horário de Funcionamento: 6h - 22h
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Serviços Prestados</h2>
+                    <ul>
+                        <li><i class="fas fa-gas-pump"></i> Abastecimento de combustível</li>
+                        <li><i class="fas fa-car-battery"></i> Troca de bateria</li>
+                        <li><i class="fas fa-oil-can"></i> Troca de óleo</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- inicio tabela de preços -->
+            <div class="price-sec-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="main-heading">PREÇOS DOS COMBUSTIVEIS</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="price-box">
+                                <div class="">
+                                    <div class="price-label comum">Gasolina comum</div>
+                                    <div class="price">R$ 6,19</div>
+                                    <div class="price-info">Preço sujeito a alteração</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="price-box">
+                                <div class="">
+                                    <div class="price-label aditivada">Gasolina aditivada</div>
+                                    <div class="price">R$ 6,19</div>
+                                    <div class="price-info">Preço sujeito a alteração</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="price-box">
+                                <div class="">
+                                    <div class="price-label etanol">Etanol</div>
+                                    <div class="price">R$ 4,75</div>
+                                    <div class="price-info">Preço sujeito a alteração</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="price-box">
+                                <div class="">
+                                    <div class="price-label s500">Diesel S-500</div>
+                                    <div class="price">R$ 5,33</div>
+                                    <div class="price-info">Preço sujeito a alteração</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="price-box">
+                                <div class="">
+                                    <div class="price-label s10">Diesel S-10</div>
+                                    <div class="price">R$ 5,43</div>
+                                    <div class="price-info">Preço sujeito a alteração</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- fim tabela de preços -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h2>Imagens do Local</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a data-bs-toggle="modal" data-bs-target="#imagem1Modal">
+                                <img src="images/imagel.jpeg" class="img-fluid mb-3" alt="Imagem 1">
+                            </a>
+                            <div class="modal fade" id="imagem1Modal" tabindex="-1" aria-labelledby="imagem1ModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <img src="images/imagel.jpeg" class="img-fluid" alt="Imagem 1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <a data-bs-toggle="modal" data-bs-target="#imagem2Modal">
+                                <img src="images/image.jpeg" class="img-fluid mb-3" alt="Imagem 2">
+                            </a>
+                            <div class="modal fade" id="imagem2Modal" tabindex="-1" aria-labelledby="imagem2ModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <img src="images/image.jpeg" class="img-fluid" alt="Imagem 2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <a data-bs-toggle="modal" data-bs-target="#imagem3Modal">
+                                <img src="images/images.jpg" class="img-fluid mb-3" alt="Imagem 3">
+                            </a>
+                            <div class="modal fade" id="imagem3Modal" tabindex="-1" aria-labelledby="imagem3ModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <img src="images/images.jpg" class="img-fluid" alt="Imagem 3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- fim container Posto-->
+        <hr class="border-top mt-4">
+
+        <!-- Inicio container Hotel-->
+        <section>
+            <div class="row text-center align-items-end">
+                <div class="" id="hotel">
+                    <h1>HOTEL MINAS BAHIA</h1>
+                </div>
+            </div>
+            <div class="container mt-4 texto">
+                <p>
+                    O Hotel Minas Bahia oferece serviços de hotelaria para os hóspedes que desejam
+                    pernoitar. Os quartos são confortáveis e equipados com comodidades modernas, como
+                    ar-condicionado, televisão, acesso à internet e banheiro privativo.
+                </p>
+            </div>
+
+        </section>
+        <section class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Contato Hotel</h2>
+                    <p>
+
+                        <i class="fas fa-phone"></i> Telefone: (00) 1234-5678<br>
+                        <i class="fas fa-envelope"></i> Email: exemplo@postogas.com<br>
+                        <i class="fas fa-clock"></i> Funcionamento 24h
+                    </p>
+                </div>
+
+                <!-- Inicio tabela de preços-->
+                <div class="row text-center align-items-end">
+                    <div>
+                        <h1>Tabela de preços</h1><br>
+                    </div>
+                    <!-- tabela de preços simples-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="bg-white p-5 rounded-lg shadow">
+                            <h1 class="h6 text-uppercase font-weight-bold mb-4">Quarto simples</h1>
+                            <h2 class="h1 font-weight-bold">R$40,00<span class="text-small font-weight-normal ml-2">/
+                                    dia</span></h2>
+
+                            <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+                            <ul class="list-unstyled my-5 text-small text-left">
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Televisão
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Ventilador
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Café da manhã incluso
+                                </li>
+                                <li class="mb-3 text-muted">
+                                    <i class="fa fa-times mr-2"></i>
+                                    <del>Banheiro interno</del>
+                                </li>
+                                <li class="mb-3 text-muted">
+                                    <i class="fa fa-times mr-2"></i>
+                                    <del>Cama de casal</del>
+                                </li>
+                                <li class="mb-3 text-muted">
+                                    <i class="fa fa-times mr-2"></i>
+                                    <del>Frigobar</del>
+                                </li>
+                            </ul>
+                            <a href="#contato" class="btn btn-outline-success">Contato</a>
+                        </div>
+                    </div>
+                    <!-- fim tabela de preços simples-->
+
+
+                    <!-- tabela de preços ventilador -->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="bg-white p-5 rounded-lg shadow">
+                            <h1 class="h6 text-uppercase font-weight-bold mb-4">Ventilador c/ banheiro</h1>
+                            <h2 class="h1 font-weight-bold">R$60,00<span class="text-small font-weight-normal ml-2">/
+                                    dia</span></h2>
+
+                            <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+                            <ul class="list-unstyled my-5 text-small text-left font-weight-normal">
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Banheiro interno
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Café da manhã incluso
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Opções com cama de casal
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Nam libero tempore
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis
+                                </li>
+                                <li class="mb-3 text-muted">
+                                    <i class="fa fa-times mr-2"></i>
+                                    <del>Frigobar</del>
+                                </li>
+                            </ul>
+                            <a href="#contato" class="btn btn-outline-success">Contato</a>
+                        </div>
+                    </div>
+                    <!-- fim tabela de preços ventilador -->
+
+
+                    <!-- tabela de preços ar -->
+                    <div class="col-lg-4">
+                        <div class="bg-white p-5 rounded-lg shadow">
+                            <h1 class="h6 text-uppercase font-weight-bold mb-4">Ar condicionado</h1>
+                            <h2 class="h1 font-weight-bold">R$80,00<span class="text-small font-weight-normal ml-2">/
+                                    dia</span></h2>
+
+                            <div class="custom-separator my-4 mx-auto bg-primary"></div>
+
+                            <ul class="list-unstyled my-5 text-small text-left font-weight-normal">
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Ar condicionado
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Frigobar
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Cama de casal
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Café da manhã incluso
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fa fa-check mr-2 text-primary"></i> Sed ut perspiciatis
+                                </li>
+                            </ul>
+                            <a href="#contato" class="btn btn-outline-success">Contato</a>
+                        </div>
+                    </div>
+                    <!-- fim tabela de preços ar -->
+                </div>
+                <br>
+                <!-- incio imagens hotel -->
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <h2>Imagens do local</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a data-bs-toggle="modal" data-bs-target="#imagem1Modal2">
+                                    <img src="images/hotelmb1.jpg" class="img-fluid w-100 h-100 mb-3" alt="Imagem 4">
+                                </a>
+                                <div class="modal fade" id="imagem1Modal2" tabindex="-1"
+                                    aria-labelledby="imagem1ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <img src="images/hotelmb1.jpg" class="img-fluid" alt="Imagem 4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <a data-bs-toggle="modal" data-bs-target="#imagem2Modal2">
+                                    <img src="images/hotelmb2.jpg" class="img-fluid w-100 h-100 mb-3" alt="Imagem 5">
+                                </a>
+                                <div class="modal fade" id="imagem2Modal2" tabindex="-1"
+                                    aria-labelledby="imagem2ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <img src="images/hotelmb2.jpg" class="img-fluid" alt="Imagem 5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <a data-bs-toggle="modal" data-bs-target="#imagem3Modal2">
+                                    <img src="images/hotelmb3.jpg" class="img-fluid w-100 h-100 mb-3" alt="Imagem 6">
+                                </a>
+                                <div class="modal fade" id="imagem3Modal2" tabindex="-1"
+                                    aria-labelledby="imagem3ModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <img src="images/hotelmb3.jpg" class="img-fluid" alt="Imagem 6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- fim imagens hotel-->
+        </section>
+        <!-- fim container hotel -->
+        <hr class="border-top mt-4">
+        <!-- Inicio container Restaurante-->
+        <section>
+            <div class="row text-center align-items-end">
+                <div class="" id="restaurante">
+                    <h1>RESTAURANTE MINAS BAHIA</h1>
+                </div>
+            </div>
+            <div class="container mt-4 texto">
+                <p>
+                    O Restaurante Minas Bahia oferece uma variedade de opções gastronômicas. Os
+                    visitantes podem desfrutar de pratos da culinária local e regional preparados por
+                    uma equipe experiente e dedicada. O cardápio é diversificado, oferecendo opções para diferentes
+                    gostos e dietas.
+                </p>
+            </div>
+
+        </section>
+        <section class="container mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Contato Restaurante</h2>
+                    <p>
+
+                        <i class="fas fa-phone"></i> Telefone: (00) 1234-5678<br>
+                        <i class="fas fa-envelope"></i> Email: exemplo@postogas.com<br>
+                        <i class="fas fa-clock"></i> Funcionamento Seg - Sab: 07h - 21h | Dom: 7h - 14h
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+    <br><br><br>
+    <!-- Inicio rodapé -->
+    <footer class="bg-success text-light text-center py-4">
+        <div class="container">
+            <p>&copy; 2023 Minas Bahia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- fim rodapé -->
+</body>
+
+</html>
