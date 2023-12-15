@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sistema</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Hotel Minas Bahia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.php">Quartos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consulta.html">Consulta</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="reservas.html">Reservas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Fazer Reserva</h2>
+        <form action="processar_reserva.php" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quantidade_pessoas">Quantidade de Pessoas:</label>
+                <input type="number" class="form-control" name="quantidade_pessoas" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data_entrada">Data de Entrada:</label>
+                <input type="date" class="form-control" name="data_entrada" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data_saida">Data de Saída:</label>
+                <input type="date" class="form-control" name="data_saida" required>
+            </div>
+
+            <div class="form-group">
+                <label for="valor_por_pessoa">Valor por Pessoa:</label>
+                <input type="text" class="form-control" name="valor_por_pessoa" required>
+            </div>
+
+            <div class="form-group">
+                <label for="numero_quarto">Número do Quarto (101-126):</label>
+                <input type="number" class="form-control" name="numero_quarto" min="101" max="126" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar Reserva</button>
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <a href="exibir_reservas.php" class="btn btn-primary w-100">Ver Reservas</a>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script/script.js" defer></script>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta - Sistema</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Hotel Minas Bahia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.php">Quartos</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="cadastro.html">Cadastro</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="consulta.html">Consulta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservas.html">Reservas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Barra de Busca -->
+    <div class="container">
+        <div class="form-group mt-3">
+            <input type="text" class="form-control" id="busca" placeholder="Buscar por nome ou CPF"
+                oninput="filtrarCadastros()">
+        </div>
+    </div>
+
+
+    <!-- Tabela de Cadastros -->
+    <div class="container mt-3">
+        <h3>Cadastros Registrados</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Data de Nascimento</th>
+                    <th>Celular</th>
+                    <th>Cidade</th>
+                    <th>Sexo</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaCadastros">
+                <!-- Dados serão inseridos aqui dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Faz a requisição Ajax para obter os cadastros do PHP
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'obter_cadastros.php', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var cadastros = JSON.parse(xhr.responseText);
+            exibirCadastrosNaTabela(cadastros);
+        }
+    };
+    xhr.send();
+});
+
+function exibirCadastrosNaTabela(cadastros) {
+    var tabela = document.getElementById('tabelaCadastros');
+
+    // Certifique-se de que tbody existe, se não, crie-o
+    var tbody = tabela.querySelector('tbody');
+    if (!tbody) {
+        tbody = document.createElement('tbody');
+        tabela.appendChild(tbody);
+    } else {
+        // Limpar o conteúdo existente da tabela antes de atualizar
+        tbody.innerHTML = '';
+    }
+
+    cadastros.forEach(function (cadastro) {
+        adicionarCadastroNaTabela(cadastro, tbody);
+    });
+}
+
+function adicionarCadastroNaTabela(cadastro) {
+    // Obtenha a tabela de cadastros
+    var tabelaCadastros = document.getElementById('tabelaCadastros');
+
+    // Crie uma nova linha na tabela
+    var novaLinha = tabelaCadastros.insertRow();
+
+    // Adicione células à nova linha com os dados do cadastro
+    novaLinha.insertCell(0).innerHTML = cadastro.nome;
+    novaLinha.insertCell(1).innerHTML = formatarCPF(cadastro.cpf);
+    novaLinha.insertCell(2).innerHTML = cadastro.data_nascimento;
+    novaLinha.insertCell(3).innerHTML = cadastro.celular;
+    novaLinha.insertCell(4).innerHTML = cadastro.cidade;
+    novaLinha.insertCell(5).innerHTML = cadastro.sexo;
+  }
+
+function formatarCPF(cpf) {
+    // Adiciona a pontuação no CPF
+    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+}
+
+function filtrarCadastros() {
+    var termo = document.getElementById('busca').value.toUpperCase();
+    var tabela = document.getElementById('tabelaCadastros');
+    var linhas = tabela.getElementsByTagName('tr');
+
+    for (var i = 0; i < linhas.length; i++) {
+        var dados = linhas[i].getElementsByTagName('td');
+        var exibir = false;
+
+        for (var j = 0; j < dados.length; j++) {
+            if (dados[j]) {
+                var texto = dados[j].innerText || dados[j].textContent;
+
+                if (texto.toUpperCase().indexOf(termo) > -1) {
+                    exibir = true;
+                    break;
+                }
+            }
+        }
+
+        linhas[i].style.display = exibir ? '' : 'none';
+    }
+}
+
+
+    </script>
