@@ -24,62 +24,169 @@
 
     <style>
         body {
-            background-color: rgb(21, 21, 21);
-            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(imagens/bg.png);
+            background-repeat: repeat;
         }
 
-        .skills {
-            border-style: solid;
-            border-color: rgb(42, 42, 42);
+        /* Estilo para centralizar o menu à direita */
+        .fixed-menu {
+            position: fixed;
+            top: 50%;
+            right: -95px;
+            transform: translateY(-50%);
+            transition: right 0.3s ease;
         }
 
-        .fa-html5 {
-            color: #E44D26;
+        .fixed-menu:hover {
+            position: fixed;
+            top: 50%;
+            right: -5px;
+            transform: translateY(-50%);
         }
 
-        .fa-css3 {
-            color: #1572B6;
+        .nav-link:hover {
+            color: orange;
         }
 
-        .fa-js {
-            color: #F7DF1E;
+        /* Estilo para a imagem */
+        .profile-image {
+            border: 10px solid orange;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
-        .fa-bootstrap {
-            color: #7952B3;
+        /* Estilo para a seção com a imagem e descrição */
+        #inicio {
+            padding: 150px 0;
         }
 
-        .fa-git {
-            color: #F1502F;
+        .description {
+            text-align: justify;
         }
 
-        .fa-node-js {
-            color: #339933;
+        .titulo {
+            color: orange;
+            font-size: 40px;
+            border-bottom: solid 1px black;
         }
 
-        .fa-angular {
-            color: #DD0031;
+        /* Estilo para a seção de Experiência */
+        #experiencia {
+            background-color: #f8f9fa;
+            padding: 50px 0;
         }
 
-        .fa-react {
-            color: #61DAFB;
+        .titulo-secao {
+            color: orange;
+            font-size: 32px;
+            margin-bottom: 30px;
         }
 
-        .fa-php {
-            color: #777BB3;
+        /* Estilo para as caixas de Experiência */
+        .experiencia-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
         }
 
-        .fa-database {
-            color: #00758F;
+        .experiencia-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
-        .bg {
-            background-color: rgb(21, 21, 21);
+        .experiencia-box h3 {
+            color: orange;
         }
 
-        .cardcontato {
-            text-decoration: none;
+        .experiencia-box p {
+            color: #555;
+        }
+
+        /* Estilo para a seção de Faculdade e Cursos */
+        #faculdade-cursos {
+            background-color: #e9ecef;
+            padding: 50px 0;
+        }
+
+        /* Estilo para a seção de Experiência Profissional */
+        #experiencia-profissional {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        /* Estilo para a seção de Soft Skills */
+        #soft-skills {
+            background-color: #e9ecef;
+            padding: 50px 0;
+        }
+
+        .soft-skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .soft-skills-list li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .soft-skills-list li:hover {
+            background-color: orange;
             color: #fff;
+        }
+
+        /* Estilo para a seção de Projetos */
+        #projetos {
+            background-color: #343a40;
+            /* Cor de fundo modificada para destacar a seção */
+            padding: 50px 0;
+            color: white;
+        }
+
+        /* Estilo para as abas de categorias */
+        .nav-pills .nav-link {
+            color: white;
+            background-color: transparent;
+            border: 1px solid white;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        /* Estilo para os projetos */
+        .experiencia-box {
+            background-color: #fff;
+            /* Cor de fundo modificada para contrastar com o fundo da seção */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .experiencia-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .experiencia-box h3 {
+            color: #343a40;
+            /* Cor do texto modificada para contrastar com o fundo branco */
+        }
+
+        .experiencia-box b {
+            color: #555;
+        }
+
+        .bg-orange {
+            background-color: orange;
+            border-color: orange;
         }
     </style>
 </head>
@@ -87,332 +194,282 @@
 <body>
 
     <header>
-        <div class="container-fluid shadow-lg">
-            <div class="row py-5 cinza text-white">
-                <div class="col-md-12">
-                    <h1 class="text-center">&lt;LUCAS ALVES/&gt</h1>
-                    <p class="text-center">Desenvolvedor Front-End</p>
-                </div>
-            </div>
-            <div class="row text-center">
-                <ul class="nav justify-content-center pb-4 cinza">
+        <div class="container-fluid">
+            <!-- Barra de navegação -->
+            <nav class="navbar bg-white fixed-menu border p-3 rounded shadow-sm">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="navg" href="#sobre">Sobre mim</a>
+                        <a class="nav-link" href="#inicio">
+                            <i class="fas fa-user me-2"></i> Lucas
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="navg" href="#habilidades">Habilidades</a>
+                        <a class="nav-link" href="#experiencia">
+                            <i class="fas fa-network-wired me-1"></i> Sobre mim
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="navg" href="#projetos">Projetos</a>
+                        <a class="nav-link" href="#projetos">
+                            <i class="fas fa-code me-1"></i> Projetos
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="navg" href="#contato">Contato</a>
+                        <a class="nav-link" href="#contato">
+                            <i class="fas fa-envelope me-2"></i> Contato
+                        </a>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
 
 
     <main>
-        <section class="lucas d-flex justify-content-center align-items-center">
+        <section>
+            <div id="inicio" class="container">
+                <div class="row bgw">
+                    <div class="col-md-4">
+                        <img src="imagens/lucas.jpg" alt="lucasalves" class="img-fluid profile-image">
+                    </div>
+                    <div class="col-md-4 bg-white rounded-3 p-4 ms-5 mt- description">
+                        <b class="titulo">Lucas Alves</b>
+                        <p class="mt-4">
+                            Olá! Meu nome é <b>Lucas Alves</b>. Sou um entusiasta da tecnologia, desenvolvedor de
+                            software e
+                            apaixonado por
+                            criar soluções inovadoras. Minha jornada no mundo da programação começou há alguns anos, e
+                            desde
+                            então tenho explorado diversas áreas, incluindo desenvolvimento web, mobile e muito mais.
+                        </p>
+                        <p>
+                            Estou sempre em busca de desafios interessantes e oportunidades para aprender e crescer.
+                            Seja bem-vindo ao meu
+                            mundo digital! Vamos criar coisas incríveis juntos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia">
             <div class="container">
+                <h2 class="titulo-secao">Experiência</h2>
                 <div class="row">
-                    <div class="col-md-6 align-self-center text-center">
-                        <h1>Olá, eu sou <b class="text-white">Lucas Alves</b></h1>
-                        <h2>Um entusiasta da programação</h2>
-                        <h5>Bem-vindo ao meu mundo de desenvolvimento front-end, onde transformo ideias em código.</h5>
+                    <div class="col-md">
+                        <div class="experiencia-box">
+                            <h3>Desenvolvedor Front-end</h3>
+                            <b>MídiaDev - 2023-2024</b>
+                            <p>Trabalhei no desenvolvimento e implementação completa do site desde o início do projeto.
+                            </p>
+                            <b>Ferramentas utilizadas:</b>
+                            <p>
+                                HTML5, CSS3, JavaScript, Bootstrap, Angular.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faculdade-cursos">
+            <div class="container">
+                <h2 class="titulo-secao">Faculdade e Cursos</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="experiencia-box">
+                            <h3>Tecnólogo em Desenvolvimento Mobile</h3>
+                            <b>Universidade Norte do Paraná (Unopar) - 2023-2024</b>
+                            <p>A faculdade me ajudou a desenvolver meus conhecimentos e expandi-los para outra área da
+                                programação. Desenvolveu minhas softskills e me ensinou a trabalhar com gerênciamento do
+                                projeto e métodologia ágeis, além de outras coisas.</p>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/79238/programing-clipart-xl.png"
-                            class="img-fluid w-100" alt="Developer Image">
+                        <div class="experiencia-box">
+                            <h3>Curso Avançado de Desenvolvimento Web</h3>
+                            <b>Udemy - 2022</b>
+                            <p>Participei de um curso avançado focado em desenvolvimento web, abordando tecnologias
+                                modernas e a maioria das linguagens e framwork's que utilizo hoje.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="text-center">
-            <div class="container-fluid">
+
+        <section id="experiencia-profissional">
+            <div class="container">
+                <h2 class="titulo-secao">Experiência Profissional</h2>
                 <div class="row">
-                    <div class="col-md-12">
-                        <a href="#sobre" class="mais">
-                            <i class="fa fa-arrow-down arrow-animation"></i>
-                            <p>Saiba mais!</p>
-                        </a>
+                    <div class="col-md-6">
+                        <div class="experiencia-box">
+                            <h3>Garçom</h3>
+                            <b>GM Sushi Restaurante LTDA - 2019-2020</b>
+                            <p>Trabalhei diretamente com o atendimento ao cliente.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="experiencia-box">
+                            <h3>Gerente de Recepção</h3>
+                            <b>Everton Layan Souza Cruz - 2022-2024</b>
+                            <p>Além do atendimento direto ao cliente, gerenciei tambem questões físcais da empresa,
+                                contábeis e desenvolvi sistemas para gerenciamento de hóspedes e reservas.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="soft-skills">
+            <div class="container">
+                <h2 class="titulo-secao">Soft Skills</h2>
+                <ul class="soft-skills-list">
+                    <li>Trabalho em equipe</li>
+                    <li>Comunicação eficaz</li>
+                    <li>Pensamento crítico</li>
+                    <li>Adaptabilidade</li>
+                    <li>Resolução de problemas</li>
+                    <li>Proatividade</li>
+                    <li>Gerenciamento de tempo</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="projetos" class="rounded-5 m-3">
+            <div class="container">
+                <b class="titulo-secao text-white">Projetos</b>
+                <ul class="nav nav-pills mb-3 mt-4" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tabs active" id="front-tab" data-bs-toggle="pill"
+                            data-bs-target="#front" type="button" role="tab" aria-controls="front"
+                            aria-selected="true">Front-end</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tabs" id="full-tab" data-bs-toggle="pill" data-bs-target="#full"
+                            type="button" role="tab" aria-controls="full" aria-selected="false">Full-stack</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tabs" id="auto-tab" data-bs-toggle="pill" data-bs-target="#auto"
+                            type="button" role="tab" aria-controls="auto" aria-selected="false">Automação</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link tabs" id="design-tab" data-bs-toggle="pill" data-bs-target="#design"
+                            type="button" role="tab" aria-controls="design" aria-selected="false">Design</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="front" role="tabpanel" aria-labelledby="front-tab"
+                        tabindex="0">
+                        <!-- Projetos Web -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Site de Sorteio</h3>
+                                    <p>Site de sorteio númerico onde o usuário pode escolher a quantitade de números a
+                                        se sortear, com um código JavaScript o site sorteia aleatóriamente um número
+                                        dentre os selecionados.</p>
+                                    <b>HTML, CSS e JavaScript</b>
+                                    <br><br>
+                                    <a href="https://github.com/Lucas19Alves/sorteio"
+                                        class="btn btn-warning w-100">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Lista de tarefas</h3>
+                                    <p>Lista de tarefas básica onde o usuário pode adicionar anotações e tarefas a lista
+                                        onde ficam armazenadas.</p>
+                                    <b>HTML, CSS, JavaScript</b>
+                                    <br><br>
+                                    <a href="https://github.com/Lucas19Alves/to-do"
+                                        class="btn btn-warning w-100">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Calculadora</h3>
+                                    <p>Calculadora web completa utilizando JavaScript.</p>
+                                    <b>HTML, CSS, JavaScript</b>
+                                    <br><br>
+                                    <a href="https://github.com/Lucas19Alves/calculadora"
+                                        class="btn btn-warning w-100">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="full" role="tabpanel" aria-labelledby="full-tab" tabindex="0">
+                        <!-- Outros Projetos -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Sistema de hotel completo</h3>
+                                    <p>Projetado para suprir todas necessidades em um sistema completo de hotel desde
+                                        cadastros e reservas até gerenciamento de quartos o sistema hoteleiro apresenta
+                                        funcões completas com armazenamento em LocalHost com posibilidade de backup e
+                                        restauração de dados e um programação estruturada facilitanto a
+                                        modificação para qualquer que seja o hotel.</p>
+                                    <b>HTML, CSS, JavaScript e Bootstrap</b>
+                                    <br><br>
+                                    <a href="https://github.com/Lucas19Alves/sistema-hotel-novo"
+                                        class="btn btn-warning w-100">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Previsão do tempo</h3>
+                                    <p>Estrutura básica de um site de previsão do tempo com a posibilidade de selecionar
+                                        a cidade e visualizar a previsão para os dias seguintes.</p>
+                                    <b>HTML, CSS, JavaScript e consumo de API</b>
+                                    <br><br>
+                                    <a href="https://github.com/Lucas19Alves/previsao-do-tempo"
+                                        class="btn btn-warning w-100">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="auto" role="tabpanel" aria-labelledby="auto-tab" tabindex="0">
+                        <!-- Outros Projetos -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Sistema de Controle</h3>
+                                    <b>Descrição do projeto...</b>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Projeto X</h3>
+                                    <b>Descrição do projeto...</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                        <!-- Outros Projetos -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Sistema de Controle</h3>
+                                    <b>Descrição do projeto...</b>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Projeto X</h3>
+                                    <b>Descrição do projeto...</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="contato" class="container">
+            <h2>Contato</h2>
+
+        </div>
     </main>
-
-    <section class="p-5" id="sobre">
-        <div class="container-fluid cinza text-white rounded-3">
-            <div class="row">
-                <div class="col-md-5">
-                    <img src="imagens/lucas.jpg" alt="Manoela (Manô)" class="img-fluid pt-2 pb-2 rounded-3 w-100">
-                </div>
-                <div class="col-md-7 align-self-center">
-                    <h2 class="mb-4">Sobre Mim</h2>
-                    <p>
-                        Olá! Meu nome é Lucas Alves.
-                    </p>
-                    <p> Aos 23 anos, minha sede por conhecimento não
-                        para. Atualmente, estudo Desenvolvimento Mobile na UNOPAR, buscando expandir ainda mais meu
-                        repertório de habilidades. Acredito que a aprendizagem contínua é a chave para impulsionar a
-                        inovação e a excelência em tudo o que fazemos.
-                    </p>
-                    <p>
-                        Concluí o Ensino Médio em 2017 e moro em Mortugaba/BA. Minhas soft
-                        skills, como comunicação, resolução de problemas, criatividade, empatia, colaboração e
-                        flexibilidade, complementam minha experiência, tornando-me eficaz no trabalho como programador
-                        web.
-                    </p>
-                    <p>
-                        Minha paixão pela tecnologia vai além do desenvolvimento front-end. Junto a três amigos, sou
-                        cofundador da MídiaDev, uma agência de marketing e criação de sites com visão
-                        inovadora. Nossa missão é capacitar marcas a se destacarem no mundo digital por meio de
-                        estratégias inteligentes e identidades impactantes.
-                    </p>
-                    <p>
-                        Estou em busca da minha primeira oportunidade como Desenvolvedor Jr.
-                    </p>
-                    <p>
-                        Abaixo, você pode conferir
-                        minhas habilidades e alguns projetos que realizei para colocar em prática meus conhecimentos!
-                    </p>
-                    <h3 class="mt-4">Minhas Habilidades:</h3>
-                    <p><i class="fas fa-check-circle"></i> Criatividade e inovação em projetos</p>
-                    <p><i class="fas fa-check-circle"></i> Comunicação eficaz</p>
-                    <p><i class="fas fa-check-circle"></i> Excelente capacidade de aprendizado</p>
-                    <p><i class="fas fa-check-circle"></i> Empatia e trabalho em equipe</p>
-                    <p><i class="fas fa-check-circle"></i> Flexibilidade e adaptabilidade</p>
-                    <p><i class="fas fa-check-circle"></i> Comprometimento com o sucesso do projeto</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <br><br><br>
-
-    <section id="habilidades" class="py-5 text-center text-white">
-        <div class="container skills rounded-3 p-5">
-            <h2 class="mb-4">Minhas Habilidades:</h2>
-            <br>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-html5 fa-3x"></i>
-                        <h3>HTML</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-css3 fa-3x"></i>
-                        <h3>CSS</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-js fa-3x"></i>
-                        <h3>JavaScript</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-bootstrap fa-3x"></i>
-                        <h3>Bootstrap</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-git fa-3x"></i>
-                        <h3>Git</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-github fa-3x"></i>
-                        <h3>GitHub</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-node-js fa-3x"></i>
-                        <h3>Node.js</h3>
-                        <p>Básico</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-angular fa-3x"></i>
-                        <h3>Angular</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-react fa-3x"></i>
-                        <h3>React</h3>
-                        <p>Intermediário</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fa fa-database fa-3x"></i>
-                        <h3>MySQL</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fab fa-php fa-3x"></i>
-                        <h3>PHP</h3>
-                        <p>Intermediário</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill">
-                        <i class="fa fa-server fa-3x"></i>
-                        <h3>Apache</h3>
-                        <p>Avançado</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <br><br><br><br>
-
-    <section class="p-5" id="projetos">
-        <div class="container-fluid text-white rounded-3 cinza">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class=" text-center p-5">Projetos</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="bg card rounded-3 m-2">
-                        <h3 class="text-center p-2">MídiaDev</h3>
-                        <img class="card-img-top" src="imagens/midiadev.png" alt="MídiaDev">
-                        <div class="card-body">
-                            <p class="card-text p-1">O projeto consistiu no desenvolvimento de um site para uma empresa
-                                de
-                                marketing, gerenciamento de redes sociais e criação de sites. <br> Um site bem
-                                estruturado que utilizou a metodologia Scrum para desenvolvimento em conjuto. Foi
-                                desenvolvido em Angular.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a class="btn w-100 btn-primary" href="https://www.midiadev.com.br"
-                                target="_blank">Acessar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="bg card rounded-3 m-2">
-                        <h3 class="text-center p-2">Sistema hotel</h3>
-                        <img class="card-img-top" src="imagens/sistema.png" alt="Sistema">
-                        <div class="card-body">
-                            <p class="card-text p-1">O projeto consistiu no desenvolvimento de um sistema de
-                                gerenciamento de quarto, cadastros e reservas para hotel. <br>
-                                Utilizando muito de banco de dados e armazenamento local</p>
-                        </div>
-                        <div class="card-footer">
-                            <a class="btn w-100 mt-1 btn-primary" href="https://github.com/Lucas19Alves/sistema-hotel"
-                                target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="bg card rounded-3 m-2">
-                        <h3 class="text-center p-2">Calculadora</h3>
-                        <img class="card-img-top" src="imagens/calculadora.png" alt="Calculadora">
-                        <div class="card-body">
-                            <p class="card-text p-1"> <br> Um projeto de uma calculadora funcional, utilizando
-                                JavaScript para realizar as contas. <br><br> </p>
-                        </div>
-                        <div class="card-footer">
-                            <a class="btn w-100 btn-primary" href="projetos/calculadora/index.html"
-                                target="_blank">Acessar</a>
-                            <a class="btn w-100 mt-1 btn-secondary" href="https://github.com/Lucas19Alves/calculadora"
-                                target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="bg card rounded-3 m-2">
-                        <h3 class="text-center p-2">Posto Minas Bahia</h3>
-                        <img class="card-img-top" src="imagens/minasbahia.png" alt="Minas Bahia">
-                        <div class="card-body">
-                            <p class="card-text p-1"><br><br>Um projeto de uma landing page para um posto, hotel e
-                                restaurante. <br><br></p>
-                        </div>
-                        <div class="card-footer">
-                            <a class="btn w-100 btn-primary" href="projetos/minas-bahia/index.html"
-                                target="_blank">Acessar</a>
-                            <a class="btn w-100 mt-1 btn-secondary" href="https://github.com/Lucas19Alves/minas-bahia"
-                                target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <br><br><br><br>
-
-    <section id="contato" class="">
-        <div class="container rounded-3 skills text-white">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class=" text-center p-5">Contato</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center text-center pb-5">
-                <div class="col-md-2 m-1 p-4  cinza rounded-3">
-                    <a href="mailto:lucaas19alves@gmail.com" target="_blank" class="cardcontato">
-                        <i class="fa fa-envelope fa-5x"></i>
-                        <h2>Email</h2>
-                        <p>lucaas19alves@gmail.com</p>
-                    </a>
-                </div>
-                <div class="col-md-2 m-1 ms-5 p-4 cinza rounded-3">
-                    <a href="https://api.whatsapp.com/send?phone=5577991156978" target="_blank" class="cardcontato">
-                        <i class="fab fa-whatsapp fa-5x"></i>
-                        <h2>WhatsApp</h2>
-                        <p>+55 (77) 99115-6978</p>
-                    </a>
-                </div>
-                <div class="col-md-2 m-1 ms-5 p-4  cinza rounded-3">
-                    <a href="https://www.linkedin.com/in/lucaas19alves/" target="_blank" class="cardcontato">
-                        <i class="fab fa-linkedin fa-5x"></i>
-                        <h2>LinkedIn</h2>
-                        <p>Lucas Alves</p>
-                    </a>
-                </div>
-                <div class="col-md-2 m-1 ms-5 p-4  cinza rounded-3">
-                    <a href="https://github.com/Lucas19Alves" target="_blank" class="cardcontato">
-                        <i class="fab fa-github fa-5x"></i>
-                        <h2>GitHub</h2>
-                        <p>Lucas Alves</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <br><br>
 
     <footer>
 
