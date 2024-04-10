@@ -2,25 +2,17 @@
 <html lang="pt-br">
 
 <head>
-    <title>Lucas Alves</title>
-
+    <title>Lucas Alves - Portifólio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-
-
     <!-- frameworks -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
-        integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
@@ -28,8 +20,8 @@
             background-repeat: repeat;
         }
 
-        /* Estilo para centralizar o menu à direita */
-        .fixed-menu {
+        /* Estilo para fixar o menu à direita */
+        .menu-fixo {
             position: fixed;
             top: 50%;
             right: -95px;
@@ -37,7 +29,7 @@
             transition: right 0.3s ease;
         }
 
-        .fixed-menu:hover {
+        .menu-fixo:hover {
             position: fixed;
             top: 50%;
             right: -5px;
@@ -45,12 +37,12 @@
         }
 
         .nav-link:hover {
-            color: orange;
+            color: rgb(33, 143, 110);
         }
 
         /* Estilo para a imagem */
-        .profile-image {
-            border: 10px solid orange;
+        .imagem-perfil {
+            border: 5px solid rgb(33, 143, 110);
             border-radius: 50%;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
@@ -60,12 +52,12 @@
             padding: 150px 0;
         }
 
-        .description {
-            text-align: justify;
+        .descrição {
+            text-align: center;
         }
 
         .titulo {
-            color: orange;
+            color: rgb(33, 143, 110);
             font-size: 40px;
             border-bottom: solid 1px black;
         }
@@ -77,7 +69,7 @@
         }
 
         .titulo-secao {
-            color: orange;
+            color: rgb(33, 143, 110);
             font-size: 32px;
             margin-bottom: 30px;
         }
@@ -89,35 +81,30 @@
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
         }
 
         .experiencia-box:hover {
-            transform: scale(1.05);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .experiencia-box h3 {
-            color: orange;
+            color: rgb(33, 143, 110);
         }
 
         .experiencia-box p {
             color: #555;
         }
 
-        /* Estilo para a seção de Faculdade e Cursos */
         #faculdade-cursos {
             background-color: #e9ecef;
             padding: 50px 0;
         }
 
-        /* Estilo para a seção de Experiência Profissional */
         #experiencia-profissional {
             background-color: #f8f9fa;
             padding: 50px 0;
         }
 
-        /* Estilo para a seção de Soft Skills */
         #soft-skills {
             background-color: #e9ecef;
             padding: 50px 0;
@@ -138,14 +125,13 @@
         }
 
         .soft-skills-list li:hover {
-            background-color: orange;
+            background-color: rgb(33, 143, 110);
             color: #fff;
         }
 
         /* Estilo para a seção de Projetos */
         #projetos {
-            background-color: #343a40;
-            /* Cor de fundo modificada para destacar a seção */
+            background-color: rgb(68, 78, 75);
             padding: 50px 0;
             color: white;
         }
@@ -154,7 +140,6 @@
         .nav-pills .nav-link {
             color: white;
             background-color: transparent;
-            border: 1px solid white;
             margin-right: 10px;
             border-radius: 5px;
         }
@@ -171,7 +156,6 @@
         }
 
         .experiencia-box:hover {
-            transform: scale(1.05);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
@@ -184,11 +168,17 @@
             color: #555;
         }
 
-        .bg-orange {
-            background-color: orange;
-            border-color: orange;
+        .link {
+            text-decoration: none;
+            color: rgb(33, 143, 110);
+        }
+
+        .link:hover {
+            text-decoration: none;
+            color: rgb(10, 63, 47);
         }
     </style>
+
 </head>
 
 <body>
@@ -196,7 +186,7 @@
     <header>
         <div class="container-fluid">
             <!-- Barra de navegação -->
-            <nav class="navbar bg-white fixed-menu border p-3 rounded shadow-sm">
+            <nav class="navbar bg-white menu-fixo border p-3 rounded shadow-sm">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#inicio">
@@ -225,26 +215,31 @@
 
 
     <main>
-        <section>
+        <section id="hero">
             <div id="inicio" class="container">
                 <div class="row bgw">
                     <div class="col-md-4">
-                        <img src="imagens/lucas.jpg" alt="lucasalves" class="img-fluid profile-image">
+                        <img src="imagens/lucas.jpg" alt="lucasalves" class="img-fluid imagem-perfil">
                     </div>
-                    <div class="col-md-4 bg-white rounded-3 p-4 ms-5 mt- description">
+                    <div class="col-md-4 bg-white rounded-3 p-4 ms-5 mt- descrição shadow">
                         <b class="titulo">Lucas Alves</b>
+                        <br>
+                        <b>Dev Full-Stack</b>
                         <p class="mt-4">
-                            Olá! Meu nome é <b>Lucas Alves</b>. Sou um entusiasta da tecnologia, desenvolvedor de
-                            software e
-                            apaixonado por
-                            criar soluções inovadoras. Minha jornada no mundo da programação começou há alguns anos, e
-                            desde
-                            então tenho explorado diversas áreas, incluindo desenvolvimento web, mobile e muito mais.
+                            Olá! Meu nome é <b>Lucas Alves</b>. Sou um desenvolvedor full-stack apaixonado por
+                            programação.
+                        </p>
+                        <p>
+                            Minha jornada no mundo da programação começou há alguns anos, e
+                            desde então tenho me aprofundado em diversas áreas, incluindo desenvolvimento web, mobile e
+                            software.
                         </p>
                         <p>
                             Estou sempre em busca de desafios interessantes e oportunidades para aprender e crescer.
+                        </p>
+                        <p>
                             Seja bem-vindo ao meu
-                            mundo digital! Vamos criar coisas incríveis juntos.
+                            portifólio!
                         </p>
                     </div>
                 </div>
@@ -257,14 +252,13 @@
                 <div class="row">
                     <div class="col-md">
                         <div class="experiencia-box">
-                            <h3>Desenvolvedor Front-end</h3>
+                            <h3 class="mb-4">Desenvolvedor Front-end</h3>
                             <b>MídiaDev - 2023-2024</b>
                             <p>Trabalhei no desenvolvimento e implementação completa do site desde o início do projeto.
                             </p>
-                            <b>Ferramentas utilizadas:</b>
-                            <p>
-                                HTML5, CSS3, JavaScript, Bootstrap, Angular.
-                            </p>
+                            <p>Projetei e desenvolvi diversos sites para clientes.</p>
+                            <p>Auxiliei a equipe de marketing com implementação de SEO em diversos projetos.</p>
+                            <a href="https://midiadev.com.br/" class="link" target="_blank">MídiaDev</a>
                         </div>
                     </div>
                 </div>
@@ -281,7 +275,7 @@
                             <b>Universidade Norte do Paraná (Unopar) - 2023-2024</b>
                             <p>A faculdade me ajudou a desenvolver meus conhecimentos e expandi-los para outra área da
                                 programação. Desenvolveu minhas softskills e me ensinou a trabalhar com gerênciamento do
-                                projeto e métodologia ágeis, além de outras coisas.</p>
+                                projeto e métodologia ágeis.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -323,13 +317,13 @@
             <div class="container">
                 <h2 class="titulo-secao">Soft Skills</h2>
                 <ul class="soft-skills-list">
-                    <li>Trabalho em equipe</li>
-                    <li>Comunicação eficaz</li>
-                    <li>Pensamento crítico</li>
-                    <li>Adaptabilidade</li>
+                    <li>Figma</li>
+                    <li>Trello</l>
+                    <li>Métodologias Ágeis</li>
+                    <li>Gerenciamento de grupo</li>
                     <li>Resolução de problemas</li>
-                    <li>Proatividade</li>
-                    <li>Gerenciamento de tempo</li>
+                    <li>Pensamento análitico</li>
+                    <li>Gerenciamento projetos</li>
 
                 </ul>
             </div>
@@ -371,7 +365,7 @@
                                     <b>HTML, CSS e JavaScript</b>
                                     <br><br>
                                     <a href="https://github.com/Lucas19Alves/sorteio"
-                                        class="btn btn-warning w-100">GitHub</a>
+                                        class="btn btn-primary w-100">GitHub</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -382,7 +376,7 @@
                                     <b>HTML, CSS, JavaScript</b>
                                     <br><br>
                                     <a href="https://github.com/Lucas19Alves/to-do"
-                                        class="btn btn-warning w-100">GitHub</a>
+                                        class="btn btn-primary w-100">GitHub</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -392,7 +386,7 @@
                                     <b>HTML, CSS, JavaScript</b>
                                     <br><br>
                                     <a href="https://github.com/Lucas19Alves/calculadora"
-                                        class="btn btn-warning w-100">GitHub</a>
+                                        class="btn btn-primary w-100">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -411,7 +405,7 @@
                                     <b>HTML, CSS, JavaScript e Bootstrap</b>
                                     <br><br>
                                     <a href="https://github.com/Lucas19Alves/sistema-hotel-novo"
-                                        class="btn btn-warning w-100">GitHub</a>
+                                        class="btn btn-primary w-100">GitHub</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -422,7 +416,19 @@
                                     <b>HTML, CSS, JavaScript e consumo de API</b>
                                     <br><br>
                                     <a href="https://github.com/Lucas19Alves/previsao-do-tempo"
-                                        class="btn btn-warning w-100">GitHub</a>
+                                        class="btn btn-primary w-100">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="experiencia-box">
+                                    <h3>Plataforma de RPG</h3>
+                                    <p>Projeto funcional completo de uma plataforma de RPG de mesa, com banco de dados, consumo de
+                                        API's e todas as ferramentas necessárias para disponibilizar uma boa experiência
+                                        de jogo aos participantes.</p>
+                                    <b>HTML, CSS, TypeScript, Angular, TailwindCSS, MySQL e consulmos de API'S</b>
+                                    <br><br>
+                                    <a href="https://github.com/Lucas19Alves/dungeons-dragonsndices"
+                                        class="btn btn-primary w-100">GitHub</a>
                                 </div>
                             </div>
                         </div>
@@ -476,13 +482,9 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
 
 </body>
 
