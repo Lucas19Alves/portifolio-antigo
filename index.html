@@ -110,6 +110,11 @@
             padding: 50px 0;
         }
 
+        #contato {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
         .soft-skills-list {
             list-style: none;
             padding: 0;
@@ -176,6 +181,17 @@
         .link:hover {
             text-decoration: none;
             color: rgb(10, 63, 47);
+        }
+
+        .contato-titulo {
+            font-size: xx-large;
+            font-weight: bold;
+            padding-bottom: 1em;
+            border-bottom: 2px solid rgb(33, 143, 110);
+        }
+
+        a {
+            text-decoration: none;
         }
     </style>
 
@@ -330,7 +346,7 @@
         </section>
 
         <section id="projetos" class="rounded-5 m-3">
-            <div class="container">
+            <div class="container justify-content-center">
                 <b class="titulo-secao text-white">Projetos</b>
                 <ul class="nav nav-pills mb-3 mt-4" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -345,10 +361,6 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link tabs" id="auto-tab" data-bs-toggle="pill" data-bs-target="#auto"
                             type="button" role="tab" aria-controls="auto" aria-selected="false">Automação</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link tabs" id="design-tab" data-bs-toggle="pill" data-bs-target="#design"
-                            type="button" role="tab" aria-controls="design" aria-selected="false">Design</button>
                     </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
@@ -422,7 +434,8 @@
                             <div class="col-md-6">
                                 <div class="experiencia-box">
                                     <h3>Plataforma de RPG</h3>
-                                    <p>Projeto funcional completo de uma plataforma de RPG de mesa, com banco de dados, consumo de
+                                    <p>Projeto funcional completo de uma plataforma de RPG de mesa, com banco de dados,
+                                        consumo de
                                         API's e todas as ferramentas necessárias para disponibilizar uma boa experiência
                                         de jogo aos participantes.</p>
                                     <b>HTML, CSS, TypeScript, Angular, TailwindCSS, MySQL e consulmos de API'S</b>
@@ -438,49 +451,56 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="experiencia-box">
-                                    <h3>Sistema de Controle</h3>
-                                    <b>Descrição do projeto...</b>
+                                    <h3>Projeto de automação</h3>
+                                    <b>Em breve...</b>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="experiencia-box">
-                                    <h3>Projeto X</h3>
-                                    <b>Descrição do projeto...</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
-                        <!-- Outros Projetos -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="experiencia-box">
-                                    <h3>Sistema de Controle</h3>
-                                    <b>Descrição do projeto...</b>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="experiencia-box">
-                                    <h3>Projeto X</h3>
-                                    <b>Descrição do projeto...</b>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div id="contato" class="container">
-            <h2>Contato</h2>
+        <section id="contato">
+            <div class="container">
+                <h1 class="text-center contato-titulo">Entre em contato!</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-lg rounded-lg">
+                            <a href="mailto:lucaas19alves@gmail.com" class="text-center p-4 d-block">
+                                <i class="fa fa-envelope fa-3x text-primary"></i>
+                                <p class="mt-2 mb-0">E-mail</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-lg rounded-lg">
+                            <a href="https://wa.me/5577991156978" class="text-center p-4 d-block">
+                                <i class="fab fa-whatsapp fa-3x text-success"></i>
+                                <p class="mt-2 mb-0">WhatsApp</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-lg rounded-lg">
+                            <a href="https://github.com/Lucas19Alves" class="text-center p-4 d-block">
+                                <i class="fab fa-github fa-3x text-dark"></i>
+                                <p class="mt-2 mb-0">GitHub</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        </div>
     </main>
 
     <footer>
-
+        <div id="contato">
+            <p class="text-center">Desenvolvido por Lucas Alves</p>
+        </div>
     </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
